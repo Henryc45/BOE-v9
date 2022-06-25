@@ -1,0 +1,305 @@
+body{
+  background-color: #FFEEEE;
+  font-family: "Montserrat";
+}
+
+/* Navigation Bar */
+.logo{
+  border-radius: 75%;
+  height: 100px;
+}
+.row{
+  color: black;
+  text-align: center;
+}
+.navbar{
+  height: 110px;
+}
+.nav-item{
+  padding: 0 18px;
+}
+.nav-button{
+  font-size: 20px;
+  font-family: "Montserrat-Light";
+  width: 150px;
+  border-radius: 0;
+}
+
+/* Filtering Bar */
+.Searchbarheader{
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+.searchbar
+{
+  margin-left: 35px;
+  background-color: #F7F5F2;
+  margin-top: 120px;
+  width: 700px;
+  height: 185px;
+  border: 2px solid;
+  border-radius: 25px;
+}
+.searchinput{
+  border: 2px solid;
+  background-color: #F7F5F2;
+  height: 40px;
+  width: 400px;
+  font-family: "Montserrat-Light";
+  font-size: 19px;
+}
+.dropdownbtn{
+  font-size: 16px;
+}
+.selectedfilters{
+  background-color: inherit;
+  margin-top: 20px;
+  height: 20px;
+  width: 650px;
+  font-size: 18px;
+  align-items: left;
+  text-align: left;
+}
+.tradefilterbtn{
+  background-color: #F7F5F2;
+  font-size: 19px;
+}
+.dropdown-menu{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  max-height: 150px;
+  overflow: auto;
+  width: 60%;
+}
+.searchbutton{
+  margin-bottom: 50px;
+}
+
+/* Main Screen Galleries */
+.basiclist{
+  margin-left: 25px;
+  margin-top: 25px;
+  border-radius: 25px;
+  border: 2px solid;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  max-height: 500px;
+  overflow: auto;
+  width: 370px;
+  background-color: #F7F5F2;
+}
+.companylogo{
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-bottom: 50px;
+}
+.galleryUL{
+  padding: 0;
+}
+.basiclistitem{
+  text-align: left;
+  min-height: 150px;
+  border-bottom: 1px solid;
+  overflow: auto;
+  padding: 5px;
+  display: block;
+}
+.basiclistitemOrganization{
+  color: blue;
+  text-decoration-line: underline;
+  font-size: 23px;
+  text-align: left;
+}
+.basiclistitemCategory{
+  font-size: 18px;
+  text-align: left;
+}
+.basiclistitemTrade{
+font-size: 18px;
+text-align: left;
+}
+.basiclistitemLocation{
+  font-size: 18px;
+  text-align: left;
+}
+.indepthlist{
+  margin: 25px 25px 5px 75px;
+  border-radius: 25px;
+  border: 2px solid;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  max-height: 500px;
+  overflow: auto;
+  width: 900px;
+  background-color: #F7F5F2;
+}
+.indepthlistitem{
+  min-height: 300px;
+  border-bottom: 1px solid;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  max-height: 300px;
+  overflow: auto;
+  padding: 0;
+}
+.indepthlistitemcontainer{
+  background-color: inherit;
+  width: 400px;
+  height: 135px;
+  text-align: left;
+  padding: 0;
+}
+.indepthlistitemOrganization{
+  color: blue;
+  text-decoration-line: underline;
+  font-size: 23px;
+  text-align: left;
+  margin-left: 10px;
+}
+.indepthlistitemCategory{
+  font-size: 18px;
+  text-align: left;
+  margin-left: 10px;
+}
+.indepthlistitemTrade{
+  font-size: 18px;
+  text-align: left;
+  margin-left: 10px;
+}
+.indepthlistitemLocation{
+  font-size: 18px;
+  text-align: left;
+  margin-left: 10px;
+}
+.descriptionlabel{
+  font-size: 23px;
+  text-align: left;
+  margin-right: 724px;
+}
+.description{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.tradesofferedlabel{
+  font-size: 23px;
+  text-align: left;
+  margin-right: 690px;
+}
+.tradesoffered{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.acceptanceratelabel{
+  font-size: 23px;
+  text-align: left;
+  margin-right: 675px;
+}
+.acceptancerate{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.pointofcontactlabel{
+  font-size: 23px;
+  text-align: left;
+  margin-right: 675px;
+}
+.pointofcontact{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.websitelabel{
+  font-size: 23px;
+  text-align: left;
+  margin-right: 760px;
+}
+.website{
+  font-size: 18px;
+  text-align: justify;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* Footer Section */
+.footer{
+  height: 50px;
+  background-color: black;
+  width: 100%;
+  margin-bottom: 0;
+}
+.footericon{
+  color: white;
+  margin-left: 150px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+.footercolumn{
+  margin-left: 300px;
+}
+.footerbtn{
+  background-color: inherit;
+  border: none;
+}
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .indepthlist{
+    width: 400px;
+  }
+  .basiclist{
+    width: 300px;
+  }
+  .logo{
+    height: 75px;
+  }
+  #navbarNav{
+    margin-left: 685px;
+  }
+  .nav-button{
+    font-size: 17px;
+  }
+  .searchbar{
+    width: 350px;
+  }
+
+/* Mobile View */
+}
+@media (max-width: 700px) {
+  .indepthlist{
+    width: 250px;
+    margin-top: 25px;
+    margin-left: 215px;
+  }
+  .basiclist{
+    width: 170px;
+    margin-top: 25px;
+  }
+  .logo{
+    height: 75px;
+  }
+  #navbarNav{
+    margin-left: 325px;
+  }
+  .nav-button{
+    font-size: 15px;
+  }
+  .searchbar{
+    width: 170px;
+    height: 200px;
+  }
+  #dropdownMenuButton1{
+    width: 100px;
+  }
+  .basiclisticon{
+    margin-left: 100px;
+  }
+}

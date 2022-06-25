@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BOE</title>
+  <!-- Boostrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+  <!-- Regular CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <script src="https://kit.fontawesome.com/7e1ff25be4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img class="logo" src="Logo.png"></a>
+      <button onselect="" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html"><button class="btn btn-dark nav-button" type="button"><i class="fa-solid fa-house"></i> Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="Groups.html"><button class="btn btn-dark nav-button" type="button"><i class="fa-solid fa-user-group"></i> Groups</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="Resources.html"><button class="btn btn-dark nav-button" type="button"><i class="fa-solid fa-book"></i> Resources</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="Messaging.html"><button class="btn btn-dark nav-button" type="button"><i class="fa-solid fa-message"></i> Messaging</button></a>
+          </li>
+          <li class="nav-item">
+            <a href="Account.html"><button class="btn btn-dark nav-button" type="button"><i class="fa-solid fa-image"></i> Account</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Filtering Bar -->
+  <div class="SelectedFilters">
+    <strong>Selected Filters: </strong>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 searchbar">
+      <h3 class= "Searchbarheader">Search for Opportunities</h3>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-12">
+            <div class="dropdown">
+              <button class="dropdownbtn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonTrade" data-bs-toggle="dropdown" aria-expanded="false">
+                Trades</button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><button id="all" class="tradefilterbtn btn active"> Show All</button></li>
+                  <li><button id="weld" class="tradefilterbtn btn active"> Welding</button></li>
+                  <li><button id="hvac" class="tradefilterbtn btn active"> HVAC</button></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-sm-12">
+            <div class="dropdown">
+              <button class="dropdownbtn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLocation" data-bs-toggle="dropdown" aria-expanded="false">
+                Locations</button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><button class="locationfilterbtn btn active"> Show All</button></li>
+                  <li><button id="miami" class="locationfilterbtn btn active"> Miami, FL</button></li>
+                  <li><button id="tampa" class="locationfilterbtn btn active"> Tampa, FL</button></li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-8 col-sm-12">
+          <input class="searchinput" type="text" id="searchInput" onkeyup="searchbarfunction()" placeholder="Search..">
+          </div>
+    </div>
+
+    <div class="selectedfilters">
+      <strong id="tradespace">Selected Trade:</strong>
+      <br class="tradespace">
+      <strong id="locationspace">Selected Location:</strong>
+      <button type="button" class="resetfilters btn btn-secondary">Reset</button>
+      <button type="button" class="submitfilters btn btn-secondary">Submit</button>
+    </div>
+  </div>
+
+  <!-- Main Section Gallery -->
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="basiclist list-group">
+
+<!-- Basic List Item Template
+<div class="filterDiv Trade Location">
+  <a class="basiclistitem list-group-item list-group-item-action" href="#ItemX">
+    <img class= "companylogo" src="" alt="Logo" />
+    <strong class="basiclistitemOrganization"></strong>
+    <br>
+    <em class="basiclistitemCategory">Category: </em>
+    <br>
+    <em class="basiclistitemTrade">Trade: </em>
+    <br>
+    <em class="basiclistitemLocation">Location: </em>
+  </a>
+</div> -->
+
+<ul class="galleryUL"  id="gallery1">
+  <li class="listentry">
+    <a class="basiclistitem list-group-item list-group-item-action" href="#Item1">
+      <img class= "companylogo" src="Company Logos/FCC.png" alt="Logo" />
+      <strong class="basiclistitemOrganization">Florida Career College</strong>
+      <br>
+      <em class="basiclistitemCategory">Category: Technical School</em>
+      <br>
+      <em class="basiclistitemTrade">Trade: HVAC</em>
+      <br>
+      <em class="basiclistitemLocation">Location: Miami, FL</em>
+    </a>
+  </li>
+
+  <li>
+      <a class="basiclistitem list-group-item list-group-item-action" href="#Item2">
+        <img class= "companylogo" src="" alt="Logo" />
+        <strong class="basiclistitemOrganization">Example</strong>
+        <br>
+        <em class="basiclistitemCategory">Category: Example</em>
+        <br>
+        <em class="basiclistitemTrade">Trade: Welding</em>
+        <br>
+        <em class="basiclistitemLocation">Location: Tampa, FL</em>
+      </a>
+  </li>
+
+  <li>
+      <a class="basiclistitem list-group-item list-group-item-action" href="#Item3">
+        <img class= "companylogo" src="" alt="Logo" />
+        <strong class="basiclistitemOrganization">Example</strong>
+        <br>
+        <em class="basiclistitemCategory">Category: Example</em>
+        <br>
+        <em class="basiclistitemTrade">Trade: Example</em>
+        <br>
+        <em class="basiclistitemLocation">Location: Miami, FL</em>
+      </a>
+  </li>
+
+  <li>
+      <a class="basiclistitem list-group-item list-group-item-action" href="#Item4">
+        <img class= "companylogo" src="" alt="Logo" />
+        <strong class="basiclistitemOrganization">Example</strong>
+        <br>
+        <em class="basiclistitemCategory">Category: Apprenticeship</em>
+        <br>
+        <em class="basiclistitemTrade">Trade: Welding</em>
+        <br>
+        <em class="basiclistitemLocation">Location: Tampa, FL</em>
+      </a>
+  </li>
+
+  <li>
+    <a class="basiclistitem list-group-item list-group-item-action" href="#Item5">
+      <img class= "companylogo" src="" alt="Logo" />
+      <strong class="basiclistitemOrganization">Example</strong>
+      <br>
+      <em class="basiclistitemCategory">Category: Technical School</em>
+      <br>
+      <em class="basiclistitemTrade">Trade: HVAC</em>
+      <br>
+      <em class="basiclistitemLocation">Location: Miami, FL</em>
+    </a>
+  </li>
+</ul>
+</div>
+</div>
+
+<!-- In Depth List Item Template:
+<div class="filterDiv Trade Location">
+    <a id= "ItemX" class="indepthlistitem list-group-item list-group-item-action" href="#list-item-X">
+      <div class="indepthlistitemcontainer">
+        <img class= "companylogo" src="" alt="Logo" />
+        <strong class="indepthlistitemOrganization"></strong>
+        <br>
+        <em class="indepthlistitemCategory">Category: </em>
+        <br>
+        <em class="indepthlistitemTrade">Trade: </em>
+        <br>
+        <em class="indepthlistitemLocation">Location: </em>
+      </div>
+      <hr>
+      <strong class="descriptionlabel"> Description: </strong> <p class="description">  </p>
+        <hr>
+      <strong class="tradesofferedlabel">Trades Offered: </strong><p class="tradesoffered"></p>
+      <hr>
+      <strong class="acceptanceratelabel">Acceptance Rate: </strong><p class="acceptancerate"></p>
+      <hr>
+      <strong class="pointofcontactlabel">Point of Contact: </strong><p class="pointofcontact">Name
+      <br>
+      Number
+      <br>
+      Email</p>
+      <hr>
+      <strong class="websitelabel">Website: </strong><p class="website"></p>
+    </a>
+</div> -->
+<div class="col-lg-8 col-md-8 col-sm-12">
+  <div class="indepthlist list-group">
+  <ul class="galleryUL" id="gallery2">
+    <li>
+      <a id= "Item1" class="indepthlistitem list-group-item list-group-item-action" href="#list-item-1">
+        <div class="indepthlistitemcontainer">
+          <img class= "companylogo" src="Company Logos/FCC.png" alt="Logo" />
+          <strong class="indepthlistitemOrganization">Florida Career College</strong>
+          <br>
+          <em class="indepthlistitemCategory">Category: Technical School</em>
+          <br>
+          <em class="indepthlistitemTrade">Trade: HVAC</em>
+          <br>
+          <em class="indepthlistitemLocation">Location: Miami, FL</em>
+        </div>
+        <hr>
+        <strong class="descriptionlabel"> Description: </strong> <p class="description"> With over 35+ years of industry experience,
+          Florida Career College is committed to your success and helping you achieve your career goals. Our staff is like family,
+          and every one of them is handpicked and it’s our mission to successfully prepare our graduates for new in-demand career
+          opportunities. Our supportive faculty and staff are committed to helping you reaching your goals, even when challenges arise.
+          From help with finding the right career path to finding a potential employer after you graduate, FCC is committed to being
+          your partner in success. Together, we can start building a future you can be proud of. </p>
+          <hr>
+        <strong class="tradesofferedlabel">Trades Offered: </strong><p class="tradesoffered">Electrical Technician,
+        Heating Ventilation and Air Conditioning (HVAC), Automotive Technician</p>
+        <hr>
+        <strong class="acceptanceratelabel">Acceptance Rate: </strong><p class="acceptancerate">75%</p>
+        <hr>
+        <strong class="pointofcontactlabel">Point of Contact: </strong><p class="pointofcontact">Steven Smith
+        <br>
+        (123)-456-7890
+        <br>
+        steven.smith@gmail.com</p>
+        <hr>
+        <strong class="websitelabel">Website: </strong><p class="website">https://www.floridacareercollege.edu/</p>
+      </a>
+    </li>
+
+    <li>
+      <a id= "Item2" class="indepthlistitem list-group-item list-group-item-action" href="#list-item-2">
+        <div class="indepthlistitemcontainer">
+          <img class= "companylogo" src="" alt="Logo" />
+          <strong class="indepthlistitemOrganization">Example</strong>
+          <br>
+          <em class="indepthlistitemCategory">Category: Example</em>
+          <br>
+          <em class="indepthlistitemTrade">Trade: Welding</em>
+          <br>
+          <em class="indepthlistitemLocation">Location: Tampa, FL</em>
+        </div>
+        <hr>
+        <strong class="descriptionlabel"> Description: </strong> <p class="description"> Lorem ipsum dolor sit amet, consectetur
+           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+           in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+           culpa qui officia deserunt mollit anim id est laborum. </p>
+          <hr>
+        <strong class="tradesofferedlabel">Trades Offered: </strong><p class="tradesoffered">Example, Example, Example</p>
+        <hr>
+        <strong class="acceptanceratelabel">Acceptance Rate: </strong><p class="acceptancerate">50%</p>
+        <hr>
+        <strong class="pointofcontactlabel">Point of Contact: </strong><p class="pointofcontact">Steven Smith
+        <br>
+        (123)-456-7890
+        <br>
+        steven.smith@gmail.com</p>
+        <hr>
+        <strong class="websitelabel">Website: </strong><p class="website">abcvocationalschool.com</p>
+      </a>
+    </li>
+
+    <li>
+      <a id= "Item3" class="indepthlistitem list-group-item list-group-item-action" href="#list-item-3">
+        <div class="indepthlistitemcontainer">
+          <img class= "companylogo" src="" alt="Logo" />
+          <strong class="indepthlistitemOrganization">Example</strong>
+          <br>
+          <em class="indepthlistitemCategory">Category: Example</em>
+          <br>
+          <em class="indepthlistitemTrade">Trade: Example</em>
+          <br>
+          <em class="indepthlistitemLocation">Location: Miami, FL</em>
+        </div>
+        <hr>
+        <strong class="descriptionlabel"> Description: </strong> <p class="description"> Lorem ipsum dolor sit amet, consectetur
+           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+           in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+           culpa qui officia deserunt mollit anim id est laborum. </p>
+          <hr>
+        <strong class="tradesofferedlabel">Trades Offered: </strong><p class="tradesoffered">Example, Example, Example</p>
+        <hr>
+        <strong class="acceptanceratelabel">Acceptance Rate: </strong><p class="acceptancerate">20%</p>
+        <hr>
+        <strong class="pointofcontactlabel">Point of Contact: </strong><p class="pointofcontact">Bob Jones
+        <br>
+        (123)-456-7890
+        <br>
+        bobjones@gmail.com</p>
+        <hr>
+        <strong class="websitelabel">Website: </strong><p class="website">abcvocationalschool.com</p>
+      </a>
+    </li>
+
+    <li>
+      <a id= "Item4" class="indepthlistitem list-group-item list-group-item-action" href="#list-item-4">
+        <div class="indepthlistitemcontainer">
+          <img class= "companylogo" src="" alt="Logo" />
+          <strong class="indepthlistitemOrganization">Example</strong>
+          <br>
+          <em class="indepthlistitemCategory">Category: Apprenticeship</em>
+          <br>
+          <em class="indepthlistitemTrade">Trade: Welding</em>
+          <br>
+          <em class="indepthlistitemLocation">Location: Tampa, FL</em>
+        </div>
+        <hr>
+        <strong class="descriptionlabel"> Description: </strong> <p class="description"> Lorem ipsum dolor sit amet, consectetur
+           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+           in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+           culpa qui officia deserunt mollit anim id est laborum. </p>
+          <hr>
+        <strong class="tradesofferedlabel">Trades Offered: </strong><p class="tradesoffered">Example, Example, Example</p>
+        <hr>
+        <strong class="acceptanceratelabel">Acceptance Rate: </strong><p class="acceptancerate">80%</p>
+        <hr>
+        <strong class="pointofcontactlabel">Point of Contact: </strong><p class="pointofcontact">Dominic Mongillo
+        <br>
+        (123)-456-7890
+        <br>
+        dominic.mongillo@gmail.com</p>
+        <hr>
+        <strong class="websitelabel">Website: </strong><p class="website">abcvocationalschool.com</p>
+      </a>
+    </li>
+
+    <li>
+      <a id= "Item5" class="indepthlistitem list-group-item list-group-item-action" href="#list-item-5">
+        <div class="indepthlistitemcontainer">
+          <img class= "companylogo" src="" alt="Logo" />
+          <strong class="indepthlistitemOrganization">Example</strong>
+          <br>
+          <em class="indepthlistitemCategory">Category: Technical School</em>
+          <br>
+          <em class="indepthlistitemTrade">Trade: HVAC</em>
+          <br>
+          <em class="indepthlistitemLocation">Location: Miami, FL</em>
+        </div>
+        <hr>
+        <strong class="descriptionlabel"> Description: </strong> <p class="description"> Lorem ipsum dolor sit amet, consectetur
+           adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+           in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+           culpa qui officia deserunt mollit anim id est laborum. </p>
+          <hr>
+        <strong class="tradesofferedlabel">Trades Offered: </strong><p class="tradesoffered">Example, Example, Example</p>
+        <hr>
+        <strong class="acceptanceratelabel">Acceptance Rate: </strong><p class="acceptancerate">47%</p>
+        <hr>
+        <strong class="pointofcontactlabel">Point of Contact: </strong><p class="pointofcontact">Javier Arriaga
+        <br>
+        (123)-456-7890
+        <br>
+        JaviBOE@gmail.com</p>
+        <hr>
+        <strong class="websitelabel">Website: </strong><p class="website">abcvocationalschool.com</p>
+      </a>
+    </li>
+  </ul>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer fixed-bottom">
+  <div class="row">
+    <div class="col-lg-2 footercolumn">
+      <a href=""><i class="footericon fa-brands fa-linkedin"></i></a>
+    </div>
+    <div class="col-lg-2">
+      <a href=""><i class="footericon fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="col-lg-2">
+      <a href=""><i class="footericon fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- External JavaScript and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="index.js" charset="utf-8"></script>
+</body>
+</html>
